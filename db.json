@@ -1,26 +1,95 @@
 {
   "users": [
     {
-      "id": "0922",
-      "name": "Bradley Padberg"
+      "id": "dab4",
+      "name": "Ruben Ernser"
     },
     {
-      "id": "df57",
-      "name": "Tommy Keebler"
+      "id": "7639",
+      "name": "Mattie Beier"
     },
     {
-      "id": "04ce",
-      "name": "Sheryl Bernier"
-    },
-    {
-      "id": "d946",
-      "name": "Ervin King"
-    },
-    {
-      "id": "997a",
-      "name": "Daryl Wehner"
+      "id": "ac63",
+      "name": "Miss Armando Emmerich"
     }
   ],
-  "albums": [],
-  "photos": []
+  "albums": [
+    {
+      "id": "630b",
+      "userId": "dab4",
+      "title": "Ergonomic Granite Cheese"
+    },
+    {
+      "id": "9410",
+      "userId": "7639",
+      "title": "Sleek Concrete Ball"
+    },
+    {
+      "id": "ba3a",
+      "userId": "dab4",
+      "title": "Modern Concrete Chips"
+    },
+    {
+      "id": "01c9",
+      "userId": "dab4",
+      "title": "Small Fresh Soap"
+    },
+    {
+      "id": "e2e4",
+      "userId": "7639",
+      "title": "Ergonomic Cotton Towels"
+    },
+    {
+      "id": "c041",
+      "userId": "7639",
+      "title": "Luxurious Steel Chair"
+    },
+    {
+      "id": "4b48",
+      "userId": "7639",
+      "title": "Awesome Fresh Bike"
+    }
+  ],
+  "photos": [
+    {
+      "id": "621c",
+      "albumId": "630b",
+      "name": "quiver"
+    },
+    {
+      "id": "80ac",
+      "albumId": "630b",
+      "name": "dissonance"
+    },
+    {
+      "id": "18e2",
+      "albumId": "630b",
+      "name": "stroke"
+    },
+    {
+      "id": "72a5",
+      "albumId": "630b",
+      "name": "notepad"
+    },
+    {
+      "id": "3534",
+      "albumId": "9410",
+      "name": "cabana"
+    },
+    {
+      "id": "e63b",
+      "albumId": "9410",
+      "name": "thrill"
+    },
+    {
+      "id": "ba59",
+      "albumId": "e2e4",
+      "name": "doctorate"
+    },
+    {
+      "id": "268f",
+      "albumId": "e2e4",
+      "name": "epithelium"
+    }
+  ]
 }
