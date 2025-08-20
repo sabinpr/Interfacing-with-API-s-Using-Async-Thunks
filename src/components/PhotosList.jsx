@@ -5,7 +5,7 @@ import Button from "./Button";
 
 function PhotosList({ album }) {
   const { data, error, isFetching } = useFetchPhotosQuery(album);
-  const [addPhoto, results] = useAddPhotoMutation();
+  const [addPhoto, addPhotoResults] = useAddPhotoMutation();
 
   const handleAddPhoto = () => {
     addPhoto(album);
@@ -13,9 +13,9 @@ function PhotosList({ album }) {
 
   let content;
   if (isFetching) {
-    content = <Skeleton className="h-10 w-full" times={3} />;
+    content = <Skeleton className="h-8 w-8" times={4} />;
   } else if (error) {
-    content = <div>Error Loading Photos</div>;
+    content = <div>Error Fetching Photos</div>;
   } else {
     content = data.map((photo) => {
       return <PhotosListItem key={photo.id} photo={photo} />;
@@ -25,13 +25,14 @@ function PhotosList({ album }) {
   return (
     <div>
       <div className="m-2 flex flex-row items-center justify-between">
-        <h3 className="text-lg font-bold">Photos for {album.title}</h3>
-        <Button onClick={handleAddPhoto} loading={results.isLoading}>
+        <h3 className="text-lg font-bold">Photos in {album.title}</h3>
+        <Button onClick={handleAddPhoto} loading={addPhotoResults.isLoading}>
           + Add Photo
         </Button>
       </div>
-
-      <div>{content}</div>
+      <div className="mx-8 flex flex-row flex-wrap justify-center">
+        {content}
+      </div>
     </div>
   );
 }

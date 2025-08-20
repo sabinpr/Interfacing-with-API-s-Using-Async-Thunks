@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { faker } from "@faker-js/faker";
+// import { faker } from "@faker-js/faker";
 
 // DEV ONLY!!!
 const pause = (duration) => {
@@ -14,7 +14,7 @@ const photosApi = createApi({
     baseUrl: "http://localhost:3005",
     fetchFn: async (...args) => {
       // Remove for production
-      await pause(100);
+      await pause(10000);
       return fetch(...args);
     },
   }),
@@ -41,7 +41,9 @@ const photosApi = createApi({
             method: "POST",
             body: {
               albumId: album.id,
-              name: faker.word.noun(),
+              url: `https://picsum.photos/150/150?random=${Math.floor(
+                Math.random() * 1000
+              )}`,
             },
           };
         },
