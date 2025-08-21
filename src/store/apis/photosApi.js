@@ -14,7 +14,7 @@ const photosApi = createApi({
     baseUrl: "http://localhost:3005",
     fetchFn: async (...args) => {
       // Remove for production
-      await pause(10000);
+      await pause(1000);
       return fetch(...args);
     },
   }),
